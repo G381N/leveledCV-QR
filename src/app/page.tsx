@@ -161,7 +161,7 @@ export default function Home() {
     );
   }
 
-  const showCards = gameState === 'initial' || gameState === 'second-chance';
+  const isInteractive = gameState === 'initial' || gameState === 'second-chance';
 
   return (
     <div className="min-h-screen w-full bg-black relative overflow-hidden">
@@ -235,17 +235,23 @@ export default function Home() {
 
       {/* Content overlay */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12">
-        {/* Cards container */}
-        {showCards && (
-          <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 px-4">
-          {/* Left Card - Red themed */}
+        {/* Cards container - always render but may be disabled */}
+        <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 px-4">
+          {/* If user already attempted and hasn't gotten a second chance, show a persistent banner so page isn't blank */}
+          {gameState === 'attempted' && (
+            <div className="absolute top-28 left-1/2 -translate-x-1/2 z-30 max-w-3xl w-[90%]">
+              <div className="bg-black/60 border border-purple-500/20 backdrop-blur-sm rounded-xl p-4 text-center">
+                <p className="text-white font-semibold">You've already chosen. Refresh a few times to try for one last chance.</p>
+              </div>
+            </div>
+          )}
+          {/* Left Card - Purple themed */}
           <button
             onClick={() => handleCardClick('left')}
             onMouseEnter={() => setHoveredCard('left')}
             onMouseLeave={() => setHoveredCard(null)}
-            className="group relative overflow-hidden rounded-3xl
-                       transform transition-all duration-700 ease-out
-                       hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+            aria-disabled={!isInteractive}
+            className={`group relative overflow-hidden rounded-3xl transform transition-all duration-700 ease-out focus:outline-none focus:ring-2 focus:ring-purple-500/50 ${!isInteractive ? 'opacity-50 pointer-events-none' : 'hover:scale-[1.02]'}`}
           >
             {/* Glass morphism background */}
             <div className="relative backdrop-blur-xl bg-gradient-to-br from-purple-950/40 via-purple-900/30 to-black/40 
@@ -300,14 +306,13 @@ export default function Home() {
             </div>
           </button>
 
-          {/* Right Card - Blue/Cyan themed */}
+          {/* Right Card - Cyan themed */}
           <button
             onClick={() => handleCardClick('right')}
             onMouseEnter={() => setHoveredCard('right')}
             onMouseLeave={() => setHoveredCard(null)}
-            className="group relative overflow-hidden rounded-3xl
-                       transform transition-all duration-700 ease-out
-                       hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+            aria-disabled={!isInteractive}
+            className={`group relative overflow-hidden rounded-3xl transform transition-all duration-700 ease-out focus:outline-none focus:ring-2 focus:ring-cyan-500/50 ${!isInteractive ? 'opacity-50 pointer-events-none' : 'hover:scale-[1.02]'}`}
           >
             {/* Glass morphism background */}
             <div className="relative backdrop-blur-xl bg-gradient-to-br from-cyan-950/40 via-blue-900/30 to-black/40 
@@ -362,7 +367,19 @@ export default function Home() {
             </div>
           </button>
         </div>
-        )}
+
+        {/* Tiny subtle link to LeveledCV (barely visible) */}
+        <div className="absolute bottom-6 right-6 z-40">
+          <a
+            href="https://leveledcv.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] opacity-20 hover:opacity-60 text-white underline"
+            title="Open leveledcv.com"
+          >
+            leveledcv.com
+          </a>
+        </div>
       </div>
     </div>
   );
