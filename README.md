@@ -1,3 +1,40 @@
+# qr-leveled
+
+This project was scaffolded with Next.js (TypeScript) and includes the PixelBlast component added via the `shadcn` CLI.
+
+What I did
+- Created a Next.js app at `/home/gebin/Desktop/qr-leveled` (TypeScript, App Router).
+- Ran `npx shadcn@latest add @react-bits/PixelBlast-TS-CSS` to add the PixelBlast component.
+
+Files added by shadcn
+- `src/components/PixelBlast.tsx`
+- `src/components/PixelBlast.css`
+- `src/lib/utils.ts`
+
+Quick start
+
+1. Install dependencies (if needed):
+
+```bash
+cd /home/gebin/Desktop/qr-leveled
+npm install
+```
+
+2. Run the dev server:
+
+```bash
+npm run dev
+```
+
+3. Open http://localhost:3000 in your browser.
+
+Notes
+- Tailwind CSS (v4) was detected and used by the shadcn tooling.
+- If you want the project at the exact capitalized folder name `QrLeveled`, you can rename the folder later; npm package naming restrictions require a lowercase package name.
+
+If you'd like, I can:
+- run the dev server now and show the first-page output
+- or commit these changes to git and create a branch
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
