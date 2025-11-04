@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Left half red, right half blue -->
+  <rect width="64" height="64" fill="#ff3b30" />
+  <rect x="32" width="32" height="64" fill="#0066ff" />
+  <!-- Optional subtle diagonal cut for style -->
+  <path d="M32 0 L64 0 L64 8 L40 8 L32 0 Z" fill="#ffffff" opacity="0.02" />
+</svg>
