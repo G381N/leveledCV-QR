@@ -183,7 +183,7 @@ export default function Home() {
           <div className="relative bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-3xl 
                         p-10 sm:p-14 md:p-16 max-w-3xl w-full shadow-2xl shadow-purple-500/10">
             <div className="space-y-6">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
                 {modalMessage.title.split('.').map((line, idx) => {
                   const trimmed = line.trim();
                   if (!trimmed) return null;
@@ -227,6 +227,11 @@ export default function Home() {
                     {modalMessage.description.split('.')[1].trim()}
                   </p>
                 )}
+
+                {/* subtle hint shown in every modal */}
+                <p className="text-[10px] sm:text-sm md:text-base text-gray-300 italic mt-3" style={{ fontSize: 'clamp(0.6rem, 1.2vw, 0.95rem)' }}>
+                  Hint: our link just might be on the page — check the bottom of the page.
+                </p>
               </div>
             </div>
           </div>
@@ -266,7 +271,7 @@ export default function Home() {
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
 
               {/* Content */}
-              <div className="relative p-8 sm:p-10 md:p-12 lg:p-16 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px] flex flex-col justify-between">
+              <div className="relative p-6 sm:p-8 md:p-10 lg:p-12 min-h-[160px] sm:min-h-[200px] md:min-h-[240px] lg:min-h-[320px] flex flex-col justify-between">
                 {/* Top section */}
                 <div className="space-y-4">
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full 
@@ -280,10 +285,10 @@ export default function Home() {
 
                 {/* Center content */}
                 <div className="space-y-6 my-8">
-                  <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight leading-tight">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-400 tracking-tight leading-tight">
                     Which path will you choose?
                   </h2>
-                  <p className="text-lg sm:text-xl text-white font-light leading-relaxed">
+                  <p className="text-sm sm:text-base text-red-200 font-light leading-relaxed">
                     Every choice leads to a different outcome. Trust your instincts and pick wisely.
                   </p>
                 </div>
@@ -327,7 +332,7 @@ export default function Home() {
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
 
               {/* Content */}
-              <div className="relative p-8 sm:p-10 md:p-12 lg:p-16 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px] flex flex-col justify-between">
+              <div className="relative p-6 sm:p-8 md:p-10 lg:p-12 min-h-[160px] sm:min-h-[200px] md:min-h-[240px] lg:min-h-[320px] flex flex-col justify-between">
                 {/* Top section */}
                 <div className="space-y-4">
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full 
@@ -341,10 +346,10 @@ export default function Home() {
 
                 {/* Center content */}
                 <div className="space-y-6 my-8">
-                  <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight leading-tight">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-400 tracking-tight leading-tight">
                     Will you play it safe or take a risk?
                   </h2>
-                  <p className="text-lg sm:text-xl text-white font-light leading-relaxed">
+                  <p className="text-sm sm:text-base text-blue-200 font-light leading-relaxed">
                     Sometimes the obvious choice isn't the right one. Make your move.
                   </p>
                 </div>
