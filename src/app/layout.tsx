@@ -68,7 +68,7 @@ export default function RootLayout({
               className="text-[10px] sm:text-xs md:text-sm text-white/70 max-w-xs"
               style={{ fontSize: 'clamp(0.6rem, 1.3vw, 0.95rem)' }}
             >
-              Hint: our link just might be on the page — check the nav bar.
+              Hint: our link just might be on the page — check the bottom of the page.
             </p>
           </div>
         </nav>
