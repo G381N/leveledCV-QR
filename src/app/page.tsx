@@ -242,7 +242,7 @@ export default function Home() {
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12">
         {/* Title */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-12 sm:mb-16 md:mb-20 tracking-tight">
-          Try Your Luck
+           First of all, never scan a random QR. But now that you're here, try your luck.
         </h1>
 
         {/* Cards container - always render but may be disabled */}
