@@ -1,5 +1,6 @@
 # qr-leveled
 
+
 This project was scaffolded with Next.js (TypeScript) and includes the PixelBlast component added via the `shadcn` CLI.
 
 What I did
