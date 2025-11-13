@@ -240,6 +240,11 @@ export default function Home() {
 
       {/* Content overlay */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12">
+        {/* Title */}
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-12 sm:mb-16 md:mb-20 tracking-tight">
+          Try Your Luck
+        </h1>
+
         {/* Cards container - always render but may be disabled */}
         <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 px-4">
           {/* If user already attempted and hasn't gotten a second chance, show a persistent banner so page isn't blank */}
@@ -286,11 +291,8 @@ export default function Home() {
                 {/* Center content */}
                 <div className="space-y-6 my-8">
                   <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-400 tracking-tight leading-tight">
-                    Which path will you choose?
+                    Choice 1
                   </h2>
-                  <p className="text-sm sm:text-base text-red-200 font-light leading-relaxed">
-                    Every choice leads to a different outcome. Trust your instincts and pick wisely.
-                  </p>
                 </div>
 
                 {/* Bottom indicator */}
@@ -347,11 +349,8 @@ export default function Home() {
                 {/* Center content */}
                 <div className="space-y-6 my-8">
                   <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-400 tracking-tight leading-tight">
-                    Will you play it safe or take a risk?
+                    Choice 2
                   </h2>
-                  <p className="text-sm sm:text-base text-blue-200 font-light leading-relaxed">
-                    Sometimes the obvious choice isn't the right one. Make your move.
-                  </p>
                 </div>
 
                 {/* Bottom indicator */}
